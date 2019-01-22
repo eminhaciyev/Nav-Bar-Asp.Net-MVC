@@ -1,0 +1,22 @@
+﻿@using NavBarOtherMethod.Models
+@model IEnumerable<News>
+@{
+    ViewBag.Title = "Siyaset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>
+    Siyaset
+</h1>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            @foreach (var item in Model)
+            {
+                <h4 class="card-title">@item.Title</h4>
+                <p class="card-text">@item.Body</p>
+            }
+        </div>
+    </div>
+</div>

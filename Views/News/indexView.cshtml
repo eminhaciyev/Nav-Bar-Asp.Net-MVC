@@ -1,0 +1,28 @@
+﻿@using NavBarOtherMethod.Models
+@model List<News>
+@{
+    ViewBag.Title = "indexView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>indexView</h2>
+
+<div class="container">
+    <h2>Card titles, text, and links</h2>
+    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom margins for a p element if it is the last child (or the only one) in card-body. The .card-link class adds a blue color to any link, and a hover effect.</p>
+    <div class="card">
+        <div class="card-body">
+            @foreach (var item in Model)
+            {                
+                <h4 class="card-title">@item.Title</h4>
+                <p class="card-text">@item.Body</p>
+            }
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
